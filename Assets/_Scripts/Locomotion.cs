@@ -5,14 +5,13 @@ using UnityEngine;
 [RequireComponent(typeof(Rigidbody))]
 public class Locomotion : MonoBehaviour
 {
+    [System.Serializable]
     public struct LocomotionInput
     {
-        public bool left;
-        public bool right;
-        public bool up;
-        public bool down;
+        public float horizontal;
+        public float vertical;
     }
-    public LocomotionInput Input { get; set; }
+    public LocomotionInput Input;
 
     [SerializeField] private float speed = 5;
 
@@ -25,7 +24,7 @@ public class Locomotion : MonoBehaviour
 
     private void FixedUpdate()
     {
-        Vector3 direction = new Vector3((Input.left ? -1 : 0) + (Input.right ? 1 : 0), 0, (Input.down ? -1 : 0) + (Input.up ? 1 : 0));
+        Vector3 direction = new Vector3(Input.horizontal, 0, Input.vertical);
         rb.velocity = direction.normalized * speed;
     }
 }

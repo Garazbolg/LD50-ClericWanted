@@ -10,19 +10,28 @@ public class MLBrain
     public struct LayerDefinition
     {
         public int LayerSize;
+        public FloatArray[] weights;
+        public float[] Biases;
+
+        [System.Serializable]
+        public struct FloatArray
+        {
+            public float[] value;
+        }
     }
 
-    MLBrain(int inputSize, LayerDefinition[] layerdefs)
+    public MLBrain(int inputSize, LayerDefinition[] layerdefs)
     {
         layers = new MLLayer[layerdefs.Length];
         var lastLayerSize = inputSize;
         for (int i = 0; i < layers.Length; i++)
         {
-            layers[i] = new MLLayer(layerdefs[i].LayerSize, lastLayerSize);
+            layers[i] = new MLLayer(layerdefs[i].LayerSize, lastLayerSize,layerdefs[i].weights,layerdefs[i].Biases);
+            lastLayerSize = layers[i].nodes.Length;
         }
     }
 
-    MLBrain(MLBrain template)
+    public MLBrain(MLBrain template)
     {
         layers = new MLLayer[template.layers.Length];
         for (int i = 0; i < layers.Length; i++)
@@ -40,6 +49,25 @@ public class MLBrain
         }
         return state;
     }
+
+    public void print()
+    {
+        string s = "";
+        foreach (var layer in layers)
+        {
+            foreach(Node n in layer.nodes)
+            {
+                s += "(" + n.Bias + ";";
+                foreach (var w in n.Weights)
+                {
+                    s += "," + w;
+                }
+                s += "),";
+            }
+            s += "\n";
+        }
+        Debug.Log(s);
+    }
 }
 
 public static class AF_Sigmoid
@@ -50,32 +78,50 @@ public static class AF_Sigmoid
     }
 }
 
+public static class AF_Linear
+{
+    public static float Compute(float value)
+    {
+        return value;
+    }
+}
+
 public class Node
 {
+    public static float WeightVariance = 3f;
+    public static float BiasVariance = 3f;
     public float[] Weights;
     public float Bias;
 
     public Node(int size)
     {
         Weights = new float[size];
-        Bias = 0.2f;
+        for (int i = 0; i < Weights.Length; i++)
+        {
+            Weights[i] = (Random.value * 2 - 1) * WeightVariance;
+        }
+        Bias = (Random.value * 2 - 1) * BiasVariance;
     }
 
     public Node(Node template)
     {
         Weights = template.Weights.Clone() as float[];
-        Bias = template.Bias;
+        for (int i = 0; i < Weights.Length; i++)
+        {
+            Weights[i] = Weights[i] + (Random.value * 2 - 1) * WeightVariance;
+        }
+        Bias = template.Bias + (Random.value * 2 - 1) * BiasVariance;
     }
 
     public float Compute(float[] inputs)
     {
-        if (inputs.Length != Weights.Length) throw new System.Exception("Invalide parameters : input size != weights size");
+        if (inputs.Length != Weights.Length) throw new System.Exception("Invalide parameters : input size != weights size. Input:" + inputs.Length + " weights:" + Weights.Length);
         float res = Bias;
         for (int i = 0; i < inputs.Length; i++)
         {
             res += inputs[i] * Weights[i];
         }
-        return AF_Sigmoid.Compute(res);
+        return AF_Linear.Compute(res);
     }
 }
 
@@ -91,6 +137,18 @@ public class MLLayer
             nodes[i] = new Node(previousLayerSize);
         }
     }
+
+    public MLLayer(int layerSize, int previousLayerSize, MLBrain.LayerDefinition.FloatArray[] weights, float[] biases)
+    {
+        nodes = new Node[layerSize];
+        for (int i = 0; i < nodes.Length; i++)
+        {
+            nodes[i] = new Node(previousLayerSize);
+            nodes[i].Weights = weights[i].value;
+            nodes[i].Bias = biases[i];
+        }
+    }
+
 
     public MLLayer(MLLayer template)
     {
