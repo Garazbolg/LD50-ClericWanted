@@ -1,0 +1,16 @@
+{
+    "name": "GameplayAssembly",
+    "rootNamespace": "",
+    "references": [
+        "GUID:106efbd312df136468d5aa35ca12aeea"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

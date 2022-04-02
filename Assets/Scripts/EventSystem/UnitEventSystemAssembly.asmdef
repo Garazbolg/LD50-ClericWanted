@@ -1,0 +1,16 @@
+{
+    "name": "EventSystemAssembly",
+    "rootNamespace": "UnitEventSystem",
+    "references": [
+        "GUID:797ed419f4761cc46b44d3bb291c72d4"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
