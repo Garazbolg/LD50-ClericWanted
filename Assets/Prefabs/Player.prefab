@@ -180,6 +180,8 @@ MonoBehaviour:
   spellName: Blessing
   spellDescription: Feeling better ?
   Tint: {r: 1, g: 1, b: 1, a: 1}
+  audioClip: {fileID: 8300000, guid: 9a1ec819be48d704c8723290d7cdcad0, type: 3}
+  audioVolume: 0.15
   healValue: 20
 --- !u!114 &567204635550233963
 MonoBehaviour:
@@ -199,6 +201,8 @@ MonoBehaviour:
   spellName: Divine Intervention
   spellDescription: Cure wounds
   Tint: {r: 0.9858169, g: 0.14899999, b: 1, a: 1}
+  audioClip: {fileID: 8300000, guid: 6081c6f0623948b4ca1bc5f53ddb24ec, type: 3}
+  audioVolume: 0.2
   healValue: 60
 --- !u!114 &3586047654041842026
 MonoBehaviour:
@@ -242,6 +246,8 @@ MonoBehaviour:
   spellName: Bandage
   spellDescription: It's just a damp bandage, but it will stick
   Tint: {r: 1, g: 1, b: 1, a: 1}
+  audioClip: {fileID: 8300000, guid: 1ec482bb95dbd85438dcf1a854b2f032, type: 3}
+  audioVolume: 0.1
   healValue: 5
 --- !u!114 &6219353807448107789
 MonoBehaviour:

@@ -38,7 +38,7 @@ public class ClassInspector : MonoBehaviour
             if(sm.spells.Length > i)
             {
                 var sd = Instantiate(spellDescriptionPrefab, spellsTransform);
-                sd.Setup(sm.spells[i],shortCuts[i]);
+                sd.Setup(sm.spells[i],shortCuts[i],i);
             }
         }
     }

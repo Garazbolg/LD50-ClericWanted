@@ -11,6 +11,8 @@ public abstract class Spell : MonoBehaviour
     [TextArea]
     public string spellDescription;
     public Color Tint = Color.white;
+    public AudioClip audioClip;
+    public float audioVolume = .5f;
 
     private float lastCastTime = 0;
     private Mana mana;
@@ -25,6 +27,7 @@ public abstract class Spell : MonoBehaviour
     {
         lastCastTime = Time.time;
         mana.CurrentMana -= ManaCost;
+        AudioManager.Instance.PlaySound(audioClip, audioVolume);
     }
 
     public bool CanCast => enabled && mana.CurrentMana > ManaCost && (Time.time - lastCastTime) > Cooldown;

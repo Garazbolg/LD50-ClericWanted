@@ -349,6 +349,10 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3114470250167539237}
     - target: {fileID: 865005573, guid: 99d1ce008375d1144b905fd07d3b3914, type: 3}
+      propertyPath: clickCast
+      value: 
+      objectReference: {fileID: 3871532623498757114}
+    - target: {fileID: 865005573, guid: 99d1ce008375d1144b905fd07d3b3914, type: 3}
       propertyPath: disabledColor.a
       value: 0.46666667
       objectReference: {fileID: 0}
@@ -442,7 +446,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8971728868904913877, guid: 99d1ce008375d1144b905fd07d3b3914, type: 3}
       propertyPath: m_Name
-      value: SpellViewDesc
+      value: SpellViewDesc Player
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 99d1ce008375d1144b905fd07d3b3914, type: 3}
@@ -451,3 +455,20 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 8971728868904913874, guid: 99d1ce008375d1144b905fd07d3b3914, type: 3}
   m_PrefabInstance: {fileID: 7164988726146664136}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &9207021676473121165 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 2065690050030927685, guid: 99d1ce008375d1144b905fd07d3b3914, type: 3}
+  m_PrefabInstance: {fileID: 7164988726146664136}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &3871532623498757114
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9207021676473121165}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3dac0484d54994840a2e859ace35357a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

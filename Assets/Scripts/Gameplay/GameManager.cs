@@ -29,4 +29,14 @@ public class GameManager : MonoBehaviour
             enemyTeam.Spawn(e);
         }
     }
+
+    public void AddReward(int gold,int xp)
+    {
+
+    }
+
+    public void RunAway()
+    {
+        playerTeamProfiles.Clear();
+    }
 }

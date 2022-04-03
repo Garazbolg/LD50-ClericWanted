@@ -15,9 +15,10 @@ public class SpellDescription : MonoBehaviour
     public Image disable;
     public Color enabledColor;
     public Color disabledColor;
+    public CastOnClick clickCast;
 
     private Spell spell;
-    public void Setup(Spell spelly, string shortcutS = "")
+    public void Setup(Spell spelly, string shortcutS = "", int index = -1)
     {
         spell = spelly;
         if(!spell)
@@ -33,6 +34,8 @@ public class SpellDescription : MonoBehaviour
         if (shortcut)
             shortcut.text = shortcutS;
         disable.color = enabledColor;
+        if (clickCast)
+            clickCast.Setup(index);
     }
 
     private void Update()

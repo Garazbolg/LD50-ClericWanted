@@ -152,6 +152,8 @@ MonoBehaviour:
   spellName: Flammenwerfer
   spellDescription: Like a Lighter, Only Better
   Tint: {r: 0.5702691, g: 0.41037738, b: 1, a: 1}
+  audioClip: {fileID: 8300000, guid: 135a991f420e492458cb634ec3b2436e, type: 3}
+  audioVolume: 0.2
   Damage: 50
 --- !u!114 &3580419708115625865
 MonoBehaviour:
@@ -171,4 +173,6 @@ MonoBehaviour:
   spellName: Fireball
   spellDescription: Burn baby Burn
   Tint: {r: 1, g: 1, b: 1, a: 1}
+  audioClip: {fileID: 8300000, guid: 6e95e35cb5da1224eae8ade002781799, type: 3}
+  audioVolume: 0.1
   Damage: 10
