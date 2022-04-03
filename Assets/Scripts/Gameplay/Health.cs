@@ -5,17 +5,16 @@ using UnityEngine.Events;
 
 namespace Gameplay
 {
-    public class Health : MonoBehaviour, IDamageHandle
+    public class Health : UnitEventSystem.UnitEventHandlerBehaviour, IDamageHandle, IHealHandle
     {
         public float value;
         public float MaxValue;
 
-        private UnitEventSystem.EventHandlerToken<DamageEvent> damageToken;
 
         void Start()
         {
-            damageToken = new UnitEventSystem.EventHandlerToken<DamageEvent>(this, gameObject);
-            damageToken.Subscribe();
+            Subscribe<DamageEvent>();
+            Subscribe<HealEvent>();
             value = MaxValue;
         }
 
@@ -27,6 +26,12 @@ namespace Gameplay
                 value = 0;
                 UnitEventSystem.UnitEventManager.Get(gameObject).SendEvent<DeathEvent>(new DeathEvent());
             }
+            return e;
+        }
+
+        HealEvent IHealHandle.OnHeal(HealEvent e)
+        {
+            value = Mathf.Min(value + e.value, MaxValue);
             return e;
         }
     }

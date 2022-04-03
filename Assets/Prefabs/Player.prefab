@@ -75,6 +75,18 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3787294951937329320, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
+      propertyPath: spells.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3787294951937329320, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
+      propertyPath: spells.Array.data[0]
+      value: 
+      objectReference: {fileID: 4388465061770624752}
+    - target: {fileID: 3787294951937329320, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
+      propertyPath: spells.Array.data[1]
+      value: 
+      objectReference: {fileID: 567204635550233963}
     - target: {fileID: 5633750722385750332, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -146,6 +158,24 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7114565550324456224, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
   m_PrefabInstance: {fileID: 1039888818197410555}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &567204635550233963
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7841451889968064987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650ec20f0a091e249a8c815cf249514b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ManaCost: 5
+  Cooldown: 9
+  icon: {fileID: 21300000, guid: ea373001f842efa449bee9e832577172, type: 3}
+  spellName: Blessing
+  spellDescription: Feeling better ?
+  healValue: 20
 --- !u!114 &3586047654041842026
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,3 +200,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b6fa49e70e4029340b7dfcbd37a4e493, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &4388465061770624752
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7841451889968064987}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 650ec20f0a091e249a8c815cf249514b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ManaCost: 0
+  Cooldown: 3
+  icon: {fileID: 21300000, guid: 5925cf315355acf4fb863ab616cfaa69, type: 3}
+  spellName: Bandage
+  spellDescription: It's just a damp bandage, but it will stick
+  healValue: 3

@@ -9,6 +9,8 @@ public class TeamManager : MonoBehaviour
     [SerializeField] private Transform SpawnPoint;
     private int currentIndex = 0;
 
+    [SerializeField] private bool targetIsRandom = false;
+
     public TeamManager targetTeam;
 
     private void Start()
@@ -29,7 +31,7 @@ public class TeamManager : MonoBehaviour
     {
         if (members.Count <= 0)
             return null;
-        int val = Random.Range(0, members.Count);
+        int val = targetIsRandom ? Random.Range(0, members.Count) : members.Count-1;
         return members[val].gameObject;
     }
 

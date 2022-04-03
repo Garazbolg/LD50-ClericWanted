@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f165377e33f7697428abf16a7c0a3646, type: 3}
   m_Name: Goon
   m_EditorClassIdentifier: 
-  classPrefab: {fileID: 7114565550324456224, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
+  classPrefab: {fileID: 2866248614069552317, guid: cebdefb086956254abfb089260d6558f, type: 3}
   MaxHealth: 100
-  MaxMana: 5
+  MaxMana: 10
   AggroStat: 0

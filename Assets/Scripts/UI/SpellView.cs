@@ -10,19 +10,15 @@ public class SpellView : MonoBehaviour
     public Slider cooldownSlider;
     public Color disabledColor;
 
-    public void Start()
-    {
-        Init();
-    }
-
     public void Init()
     {
-
-        image.sprite = spell.icon;
+        if(spell)
+            image.sprite = spell.icon;
     }
 
     private void Update()
     {
+        if (!spell) return;
         if (spell.CanCast)
         {
             image.color = Color.white;
