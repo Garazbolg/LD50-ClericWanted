@@ -18,12 +18,14 @@ public class RecuitmentManager : MonoBehaviour
     public void Setup()
     {
         partyDisplay.Setup();
-        if(WorldMain.party == null || WorldMain.party.Count >= 3)
+        if (WorldMain.party == null || WorldMain.party.Count >= WorldMain.MaxPartymembers)
         {
             PartyViewManager.instance.DisplayText("Your party is already full.\n Time to explore some dungeons !");
             recruitsTranforms.gameObject.SetActive(false);
             return;
         }
+        else
+            recruitsTranforms.gameObject.SetActive(true);
 
         foreach (Transform t in recruitsTranforms)
         {
