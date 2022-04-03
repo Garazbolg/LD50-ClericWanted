@@ -16,3 +16,4 @@ MonoBehaviour:
   MaxHealth: 400
   MaxMana: 5
   AggroStat: 100
+  sprite: {fileID: 21300000, guid: 54902921c77246944ae39e0d9f9d3214, type: 3}

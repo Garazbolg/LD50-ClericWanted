@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class CharacterRenderer : MonoBehaviour
 {
     public Image image;
+    public Image frame;
 
     public void Set(Sprite sprite)
     {

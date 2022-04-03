@@ -7,18 +7,40 @@ public class ClassInspector : MonoBehaviour
 {
     public static ClassInspector Instance;
 
+    public bool IsInstance = true;
+
     public GameObject target;
 
     public HealthBarView hBar;
     public ManaBarView mBar;
     public TMPro.TextMeshProUGUI iname;
     public Image image;
-    public void Setup(GameObject gameObject)
+    public SpellDescription spellDescriptionPrefab;
+    public Transform spellsTransform;
+
+    public int maxSpells = 2;
+
+    public string[] shortCuts;
+
+    public void Setup(GameObject go)
     {
-        hBar.health = gameObject.GetComponent<Gameplay.Health>();
-        mBar.health = gameObject.GetComponent<Mana>();
-        iname.text = gameObject.name;
-        image.sprite = gameObject.GetComponent<CharacterRenderer>().Get();
+        hBar.health = go.GetComponent<Gameplay.Health>();
+        mBar.health = go.GetComponent<Mana>();
+        iname.text = go.name;
+        image.sprite = go.GetComponent<CharacterRenderer>().Get();
+        foreach (Transform t in spellsTransform)
+        {
+            Destroy(t.gameObject);
+        }
+        var sm = go.GetComponent<SpellManager>();
+        for (int i = 0; i < maxSpells; i++)
+        {
+            if(sm.spells.Length > i)
+            {
+                var sd = Instantiate(spellDescriptionPrefab, spellsTransform);
+                sd.Setup(sm.spells[i],shortCuts[i]);
+            }
+        }
     }
 
     private void OnValidate()
@@ -29,6 +51,7 @@ public class ClassInspector : MonoBehaviour
 
     private void Awake()
     {
-        Instance = this;
+        if(IsInstance)
+            Instance = this;
     }
 }

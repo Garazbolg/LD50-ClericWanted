@@ -492,6 +492,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5fdf7da137b0e4440ac0ce185c87bbd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  HighlightedColor: {r: 0.20091248, g: 1, b: 0, a: 1}
 --- !u!1 &2665852894560799209
 GameObject:
   m_ObjectHideFlags: 0
@@ -1047,6 +1048,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   image: {fileID: 2665852893433085241}
+  frame: {fileID: 2665852893798929983}
 --- !u!95 &6024860513493661634
 Animator:
   serializedVersion: 3

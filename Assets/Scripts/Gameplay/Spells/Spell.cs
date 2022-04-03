@@ -10,9 +10,11 @@ public abstract class Spell : MonoBehaviour
     public string spellName;
     [TextArea]
     public string spellDescription;
+    public Color Tint = Color.white;
 
     private float lastCastTime = 0;
     private Mana mana;
+
 
     private void Start()
     {

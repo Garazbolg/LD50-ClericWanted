@@ -32,7 +32,7 @@ public class CharacterAnimator : UnitEventSystem.UnitEventHandlerBehaviour , Gam
 
     DamageEvent IDamageHandle.OnDamage(DamageEvent e)
     {
-        PlayHit(e.value);
+        PlayHit(e.value/15);
         return e;
     }
 

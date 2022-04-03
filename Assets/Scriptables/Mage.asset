@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f165377e33f7697428abf16a7c0a3646, type: 3}
-  m_Name: Goon
+  m_Name: Mage
   m_EditorClassIdentifier: 
-  classPrefab: {fileID: 2866248614069552317, guid: cebdefb086956254abfb089260d6558f, type: 3}
-  MaxHealth: 100
-  MaxMana: 10
-  AggroStat: 0
-  sprite: {fileID: 21300000, guid: 58b5a376ea4d28145b7c31ffa9b4ec02, type: 3}
+  classPrefab: {fileID: 355965274020561603, guid: f3991bd791449ad4ca015e4d3eda37a5, type: 3}
+  MaxHealth: 150
+  MaxMana: 20
+  AggroStat: -10
+  sprite: {fileID: 21300000, guid: ef7ce1a344934a94c8d1723b9c6ec263, type: 3}

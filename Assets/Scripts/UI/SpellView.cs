@@ -8,12 +8,19 @@ public class SpellView : MonoBehaviour
     public Spell spell;
     public Image image;
     public Slider cooldownSlider;
+    public Color enabledColor;
     public Color disabledColor;
 
     public void Init()
     {
-        if(spell)
+        if (spell)
+        {
             image.sprite = spell.icon;
+            enabledColor = spell.Tint;
+            disabledColor = enabledColor;
+            disabledColor.a = .5f;
+            image.color = enabledColor;
+        }
     }
 
     private void Update()
@@ -21,7 +28,7 @@ public class SpellView : MonoBehaviour
         if (!spell) return;
         if (spell.CanCast)
         {
-            image.color = Color.white;
+            image.color = enabledColor;
             cooldownSlider.gameObject.SetActive(false);
         }
         else

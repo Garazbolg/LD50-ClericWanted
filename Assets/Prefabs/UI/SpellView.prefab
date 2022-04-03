@@ -68,7 +68,7 @@ RectTransform:
   m_Father: {fileID: 8499356938052045943}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
-  m_AnchorMin: {x: 0, y: 0}
+  m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
@@ -178,6 +178,7 @@ MonoBehaviour:
   spell: {fileID: 0}
   image: {fileID: 4752999645947294571}
   cooldownSlider: {fileID: 6745342717942904050}
+  enabledColor: {r: 0, g: 0, b: 0, a: 0}
   disabledColor: {r: 0.794, g: 0.794, b: 0.794, a: 1}
 --- !u!222 &963384299481609968
 CanvasRenderer:
