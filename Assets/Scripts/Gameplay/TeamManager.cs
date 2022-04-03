@@ -6,6 +6,9 @@ public class TeamManager : MonoBehaviour
 {
     public List<TeamMember> members = new List<TeamMember>();
 
+    [SerializeField] private Transform SpawnPoint;
+    private int currentIndex = 0;
+
     public TeamManager targetTeam;
 
     private void Start()
@@ -13,10 +16,10 @@ public class TeamManager : MonoBehaviour
         members.Sort((x, y) => x.aggroStat.CompareTo(y.aggroStat));
     }
 
-    public void Spawn(GameObject gameObject)
+    public void Spawn(CharacterProfile profile)
     {
-        var go = Instantiate(gameObject, transform);
-        var tm = go.GetComponent<TeamMember>();
+        var tm = CharacterProfile.InitProfile(profile, SpawnPoint).GetComponent<TeamMember>();
+        currentIndex++;
         tm.team = this;
         members.Add(tm);
         members.Sort((x, y) => x.aggroStat.CompareTo(y.aggroStat));
@@ -26,7 +29,8 @@ public class TeamManager : MonoBehaviour
     {
         if (members.Count <= 0)
             return null;
-        return members[members.Count - 1].gameObject;
+        int val = Random.Range(0, members.Count);
+        return members[val].gameObject;
     }
 
     public void Remove(TeamMember tm)

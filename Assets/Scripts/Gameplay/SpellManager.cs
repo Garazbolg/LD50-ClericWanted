@@ -24,7 +24,7 @@ public class SpellManager : UnitEventSystem.UnitEventHandlerBehaviour, Gameplay.
     public bool CanCast(int index)
     {
         if (!this.enabled) return false;
-        if (spells.Length <= index) throw new System.Exception("Invalid Index for spell. Length:" + spells.Length + " index:" + index);
+        if (spells.Length <= index) return false;
         return spells[index].CanCast;
     }
 

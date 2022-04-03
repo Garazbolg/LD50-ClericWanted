@@ -7,6 +7,10 @@ public abstract class Spell : MonoBehaviour
     public float Cooldown = 3;
     public Sprite icon;
 
+    public string spellName;
+    [TextArea]
+    public string spellDescription;
+
     private float lastCastTime = 0;
     private Mana mana;
 

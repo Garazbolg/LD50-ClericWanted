@@ -12,6 +12,12 @@ public class SpellView : MonoBehaviour
 
     public void Start()
     {
+        Init();
+    }
+
+    public void Init()
+    {
+
         image.sprite = spell.icon;
     }
 

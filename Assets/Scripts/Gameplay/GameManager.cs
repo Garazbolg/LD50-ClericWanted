@@ -4,6 +4,29 @@ using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static CharacterProfile[] playerTeamProfiles;
-    public static CharacterProfile[] enemyTeamProfiles;
+    public List<CharacterProfile> playerTeamProfiles;
+    public List<CharacterProfile> enemyTeamProfiles;
+
+    public TeamManager playerTeam;
+    public TeamManager enemyTeam;
+
+    private void Start()
+    {
+        if (playerTeamProfiles.Count > 5)
+            Debug.LogError("Too many Characters");
+        if (enemyTeamProfiles.Count > 5)
+            Debug.LogError("Too many Characters");
+
+        playerTeamProfiles.Sort((x, y) => x.AggroStat.CompareTo(y.AggroStat));
+        enemyTeamProfiles.Sort((x, y) => -x.AggroStat.CompareTo(y.AggroStat));
+
+        foreach (var p in playerTeamProfiles)
+        {
+            playerTeam.Spawn(p);
+        }
+        foreach (var e in enemyTeamProfiles)
+        {
+            enemyTeam.Spawn(e);
+        }
+    }
 }
