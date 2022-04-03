@@ -19,7 +19,7 @@ public class TeamMember : UnitEventSystem.UnitEventHandlerBehaviour, Gameplay.ID
 
     public DeathEvent OnDeath(DeathEvent e)
     {
-        team.members.Remove(this);
+        team.Remove(this);
         return e;
     }
 }

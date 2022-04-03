@@ -1,24 +1,34 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GameManager : MonoBehaviour
 {
-    public static List<CharacterProfile> playerTeamProfiles;
+    public static List<CharacterProfile> staticplayerTeamProfiles;
+    public List<CharacterProfile> playerTeamProfiles = new List<CharacterProfile>();
     public List<CharacterProfile> enemyTeamProfiles;
     public WaveDefinition[] waves;
 
-    private int WaveIndex = 0;
+    private int WaveIndex = -1;
 
     public TeamManager playerTeam;
     public TeamManager enemyTeam;
 
+    public float delayBetweenWaves = 3;
+
     private void Start()
     {
+        if (staticplayerTeamProfiles != null)
+        {
+            playerTeamProfiles.Clear();
+            playerTeamProfiles.AddRange(staticplayerTeamProfiles);
+        }
+
         if (playerTeamProfiles.Count > 5)
             Debug.LogError("Too many Characters");
 
-        playerTeamProfiles.Sort((x, y) => x.AggroStat.CompareTo(y.AggroStat));
+        playerTeamProfiles.Sort((x, y) =>x.AggroStat.CompareTo(y.AggroStat));
 
         foreach (var p in playerTeamProfiles)
         {
@@ -28,9 +38,24 @@ public class GameManager : MonoBehaviour
         NextWave();
     }
 
+    public void CompleteWave()
+    {
+        AddReward(waves[WaveIndex].GoldReward, waves[WaveIndex].XPReward);
+        StartCoroutine(CO_StartNextWave());
+    }
+
+    private IEnumerator CO_StartNextWave()
+    {
+        yield return new WaitForSeconds(2);
+        enemyTeam.Clear();
+        yield return new WaitForSeconds(delayBetweenWaves-2);
+        NextWave();
+    }
+
     private void NextWave()
     {
-        if (WaveIndex > waves.Length)
+        WaveIndex++;
+        if (WaveIndex >= waves.Length)
         {
             Victory();
             return;
@@ -59,21 +84,26 @@ public class GameManager : MonoBehaviour
 
     public void AddReward(int gold,int xp)
     {
-
+        WorldMain.Gold += gold;
+        WorldMain.XP += xp;
     }
 
     public void RunAway()
     {
-        
+        WorldMain.party.Clear();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Lobby");
     }
 
     public static void Victory()
     {
-
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Victory", UnityEngine.SceneManagement.LoadSceneMode.Additive);
     }
 
     public static void GameOver()
     {
-
+        WorldMain.Gold = 0;
+        WorldMain.XP = 0;
+        WorldMain.party.Clear();
+        UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver",UnityEngine.SceneManagement.LoadSceneMode.Additive);
     }
 }

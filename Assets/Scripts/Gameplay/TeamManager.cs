@@ -7,11 +7,11 @@ public class TeamManager : MonoBehaviour
     public List<TeamMember> members = new List<TeamMember>();
 
     [SerializeField] private Transform SpawnPoint;
-    private int currentIndex = 0;
 
     [SerializeField] private bool targetIsRandom = false;
 
     public TeamManager targetTeam;
+    public bool isEnemyTeam = false;
 
     private void Start()
     {
@@ -21,10 +21,17 @@ public class TeamManager : MonoBehaviour
     public void Spawn(CharacterProfile profile)
     {
         var tm = CharacterProfile.InitProfile(profile, SpawnPoint).GetComponent<TeamMember>();
-        currentIndex++;
         tm.team = this;
         members.Add(tm);
         members.Sort((x, y) => x.aggroStat.CompareTo(y.aggroStat));
+    }
+
+    public void Clear()
+    {
+        foreach (Transform t in SpawnPoint)
+        {
+            Destroy(t.gameObject);
+        }
     }
 
     public GameObject GetAggroTarget()
@@ -40,7 +47,8 @@ public class TeamManager : MonoBehaviour
         members.Remove(tm);
         if(members.Count <= 0)
         {
-            Destroy(this);
+            if (isEnemyTeam)
+                FindObjectOfType<GameManager>().CompleteWave();
         }
     }
 }

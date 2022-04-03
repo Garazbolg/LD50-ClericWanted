@@ -10,6 +10,7 @@ public static class WorldMain
     public static bool[] unlockedSpells;
     public static List<Item> items;
     public static List<CharacterProfile> party;
+    public static int MaxPartymembers = 2;
 
     public static void Init()
     {
@@ -31,7 +32,8 @@ public static class WorldMain
 
     public static void Save()
     {
-
+        PlayerPrefs.SetInt("Gold", Gold);
+        PlayerPrefs.SetInt("XP", XP);
     }
 
     public static void Load()

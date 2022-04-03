@@ -45,9 +45,9 @@ public class LobbyManager : MonoBehaviour
 
     public void StartDungeon()
     {
-        GameManager.playerTeamProfiles.Clear();
-        GameManager.playerTeamProfiles.Add(playerProfile);
-        GameManager.playerTeamProfiles.AddRange(WorldMain.party);
+        GameManager.staticplayerTeamProfiles = new List<CharacterProfile>();
+        GameManager.staticplayerTeamProfiles.Add(playerProfile);
+        GameManager.staticplayerTeamProfiles.AddRange(WorldMain.party);
         UnityEngine.SceneManagement.SceneManager.LoadScene("Battle");
     }
 }
