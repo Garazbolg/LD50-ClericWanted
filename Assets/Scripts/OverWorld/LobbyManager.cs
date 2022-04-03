@@ -13,6 +13,8 @@ public class LobbyManager : MonoBehaviour
 
     public GameObject[] Zones;
 
+    public CharacterProfile playerProfile;
+
     private void Awake()
     {
         Instance = this;
@@ -28,6 +30,7 @@ public class LobbyManager : MonoBehaviour
         HideZone(currentZone);
         currentZone = index;
         ShowZone(currentZone);
+        ZoneChanged.Invoke();
     }
 
     public void ShowZone(int index)
@@ -38,5 +41,13 @@ public class LobbyManager : MonoBehaviour
     public void HideZone(int index)
     {
         Zones[index].SetActive(false);
+    }
+
+    public void StartDungeon()
+    {
+        GameManager.playerTeamProfiles.Clear();
+        GameManager.playerTeamProfiles.Add(playerProfile);
+        GameManager.playerTeamProfiles.AddRange(WorldMain.party);
+        UnityEngine.SceneManagement.SceneManager.LoadScene("Battle");
     }
 }
