@@ -17,5 +17,5 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 43f631eec10e7da41abdee7fdac93477, type: 2}
   - {fileID: 11400000, guid: 43f631eec10e7da41abdee7fdac93477, type: 2}
   - {fileID: 11400000, guid: 43f631eec10e7da41abdee7fdac93477, type: 2}
-  GoldReward: 286
-  XPReward: 322
+  GoldReward: 399
+  XPReward: 487

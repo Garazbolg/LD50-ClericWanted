@@ -34,11 +34,6 @@ public static class WorldMain
         boughtItems[3] = false;
         party = new List<CharacterProfile>();
     }
-
-    public static void Unlock(int index)
-    {
-        unlockedSpells[index] = true;
-    }
     /*
     public static void Save()
     {
