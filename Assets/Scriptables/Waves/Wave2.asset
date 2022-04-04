@@ -10,10 +10,11 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 7b913c91b469eae46a616f7debd108d3, type: 3}
-  m_Name: Wave1
+  m_Name: Wave2
   m_EditorClassIdentifier: 
   enemies:
   - {fileID: 11400000, guid: 409afb905f218ad43ae236ee45193d66, type: 2}
   - {fileID: 11400000, guid: 409afb905f218ad43ae236ee45193d66, type: 2}
-  GoldReward: 95
-  XPReward: 113
+  - {fileID: 11400000, guid: 409afb905f218ad43ae236ee45193d66, type: 2}
+  GoldReward: 123
+  XPReward: 180

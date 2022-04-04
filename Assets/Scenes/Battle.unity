@@ -797,7 +797,13 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 409afb905f218ad43ae236ee45193d66, type: 2}
   waves:
   - {fileID: 11400000, guid: 7c95c2a18d1deff48bba6d71217dcf8b, type: 2}
-  - {fileID: 11400000, guid: 7c95c2a18d1deff48bba6d71217dcf8b, type: 2}
+  - {fileID: 11400000, guid: b66b6c50cdbd6cd409dbc845e9a8ff8a, type: 2}
+  - {fileID: 11400000, guid: c112d055646005744a49b0113e0eb892, type: 2}
+  - {fileID: 11400000, guid: 4b0d95b4cc5d6b349a5fd9d49af17545, type: 2}
+  - {fileID: 11400000, guid: 79dd759eb8f1dfb40bf6343f02549006, type: 2}
+  - {fileID: 11400000, guid: 67cf605de9f1d424ba0ecdc76ca72560, type: 2}
+  - {fileID: 11400000, guid: 102ec7e1455e0954da8b835fbadc7c49, type: 2}
+  - {fileID: 11400000, guid: 03c88e838b1093f48887c51ff2192ce2, type: 2}
   playerTeam: {fileID: 1120448218}
   enemyTeam: {fileID: 639043040}
   delayBetweenWaves: 3

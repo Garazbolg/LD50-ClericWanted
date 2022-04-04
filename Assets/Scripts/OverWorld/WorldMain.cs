@@ -19,8 +19,8 @@ public static class WorldMain
         if (isInit)
             return;
         isInit = true;
-        Gold = 30049;
-        XP = 1289;
+        Gold = 1050;
+        XP = 0;
         unlockedSpells = new bool[4];
         unlockedSpells[0] = true;
         unlockedSpells[1] = false;
