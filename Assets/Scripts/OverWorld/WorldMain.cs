@@ -19,8 +19,14 @@ public static class WorldMain
         if (isInit)
             return;
         isInit = true;
-        Gold = 1050;
-        XP = 0;
+
+        bool isEditor = false;
+#if UNITY_EDITOR
+        isEditor = true;
+#endif
+
+        Gold = isEditor ? 9999: 1050;
+        XP = isEditor ? 9999 : 0;
         unlockedSpells = new bool[4];
         unlockedSpells[0] = true;
         unlockedSpells[1] = false;
