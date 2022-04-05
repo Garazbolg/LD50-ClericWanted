@@ -922,8 +922,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTeamProfiles:
   - {fileID: 11400000, guid: cfcca6ac3de4fc844819d1929148b79a, type: 2}
+  - {fileID: 11400000, guid: 409afb905f218ad43ae236ee45193d66, type: 2}
   - {fileID: 11400000, guid: 43f631eec10e7da41abdee7fdac93477, type: 2}
-  - {fileID: 11400000, guid: 43f631eec10e7da41abdee7fdac93477, type: 2}
+  - {fileID: 11400000, guid: b6376c663bad9a544adaec1712666a30, type: 2}
   enemyTeamProfiles:
   - {fileID: 11400000, guid: 409afb905f218ad43ae236ee45193d66, type: 2}
   - {fileID: 11400000, guid: 409afb905f218ad43ae236ee45193d66, type: 2}

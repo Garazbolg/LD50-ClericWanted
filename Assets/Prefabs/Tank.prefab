@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &5006584698193862557
+--- !u!1001 &989319364047090402
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -103,22 +103,6 @@ PrefabInstance:
       propertyPath: m_AnchorMax.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 3787294951937329320, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
-      propertyPath: spells.Array.size
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 3787294951937329320, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
-      propertyPath: spells.Array.data[0]
-      value: 
-      objectReference: {fileID: -992929985564388546}
-    - target: {fileID: 3787294951937329320, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
-      propertyPath: spells.Array.data[1]
-      value: 
-      objectReference: {fileID: 5450736825044604250}
-    - target: {fileID: 5428920407196200388, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
-      propertyPath: randomize
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6326878920794360660, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -129,60 +113,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7114565550324456224, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
       propertyPath: m_Name
-      value: Goon
+      value: Character
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
---- !u!1 &2866248614069552317 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7114565550324456224, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
-  m_PrefabInstance: {fileID: 5006584698193862557}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &-992929985564388546
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2866248614069552317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1598d6c4cc45d8040b44b62b803c7fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ManaCost: 2
-  Cooldown: 1.7
-  icon: {fileID: 21300000, guid: d643078f16196e14f91700ed31d4f1be, type: 3}
-  spellName: Bee sting
-  spellDescription: 'Deal 3
-
-    Everybody gets a sting
-
-'
-  Tint: {r: 1, g: 1, b: 1, a: 0}
-  audioClip: {fileID: 8300000, guid: 8eadbc387d71a2d42a4f3a4d9a973726, type: 3}
-  audioVolume: 0.2
-  Damage: 3
---- !u!114 &5450736825044604250
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2866248614069552317}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 1598d6c4cc45d8040b44b62b803c7fad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ManaCost: 5
-  Cooldown: 6.3
-  icon: {fileID: 21300000, guid: d643078f16196e14f91700ed31d4f1be, type: 3}
-  spellName: Reckless swing
-  spellDescription: 'Deal 15
-
-    There is a wrong way to dance with a blade'
-  Tint: {r: 0.68095016, g: 0.291, b: 1, a: 1}
-  audioClip: {fileID: 8300000, guid: 095072c6ed5d0ae4083212e78cd48b49, type: 3}
-  audioVolume: 0.2
-  Damage: 15

@@ -150,7 +150,9 @@ MonoBehaviour:
   Cooldown: 7
   icon: {fileID: 21300000, guid: fa51ab3023345a146af8de64b70c454c, type: 3}
   spellName: Flammenwerfer
-  spellDescription: Like a Lighter, Only Better
+  spellDescription: 'Deal 50 Magic damage
+
+    Like a Lighter, Only Better'
   Tint: {r: 0.5702691, g: 0.41037738, b: 1, a: 1}
   audioClip: {fileID: 8300000, guid: 135a991f420e492458cb634ec3b2436e, type: 3}
   audioVolume: 0.2
@@ -171,7 +173,9 @@ MonoBehaviour:
   Cooldown: 3
   icon: {fileID: 21300000, guid: fa51ab3023345a146af8de64b70c454c, type: 3}
   spellName: Fireball
-  spellDescription: Burn baby Burn
+  spellDescription: 'Deal 10 Magic damage
+
+    Burn baby Burn'
   Tint: {r: 1, g: 1, b: 1, a: 1}
   audioClip: {fileID: 8300000, guid: 6e95e35cb5da1224eae8ade002781799, type: 3}
   audioVolume: 0.1
