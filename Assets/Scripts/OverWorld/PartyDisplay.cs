@@ -13,6 +13,10 @@ public class PartyDisplay : MonoBehaviour
             s.text = "Empty slot";
             s.fontStyle = TMPro.FontStyles.Italic;
         }
+        for (int i = 0; i < slots.Length; i++)
+        {
+            slots[i].gameObject.SetActive(i < WorldMain.MaxPartymembers);
+        }
         if (WorldMain.party != null)
         {
             for (int i = 0; i < WorldMain.party.Count; i++)
