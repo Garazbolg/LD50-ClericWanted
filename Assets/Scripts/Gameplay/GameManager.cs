@@ -44,6 +44,15 @@ public class GameManager : MonoBehaviour
         StartCoroutine(CO_StartNextWave());
     }
 
+    public int GetWaveIndex()
+    {
+        return WaveIndex;
+    }
+    public int GetMaxWaves()
+    {
+        return waves.Length;
+    }
+
     private IEnumerator CO_StartNextWave()
     {
         yield return new WaitForSeconds(2);
