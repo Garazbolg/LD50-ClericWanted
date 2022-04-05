@@ -30,7 +30,8 @@ public class SpellManager : UnitEventSystem.UnitEventHandlerBehaviour, Gameplay.
 
     public void Cast(int index, GameObject target)
     {
-        spells[index].CastOn(target);
+        if(target.GetComponent<Gameplay.Health>().value > 0)
+            spells[index].CastOn(target);
     }
 
     public DeathEvent OnDeath(DeathEvent e)
