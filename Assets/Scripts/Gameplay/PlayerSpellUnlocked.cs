@@ -12,7 +12,7 @@ public class PlayerSpellUnlocked : MonoBehaviour
         List<Spell> sp = new List<Spell>();
         for (int i = 0; i < 4; i++)
         {
-            if (WorldMain.unlockedSpells[i])
+            if (WorldMain.unlockedSpells == null || WorldMain.unlockedSpells[i])
                 sp.Add(spells[i]);
         }
         sm.spells = sp.ToArray();

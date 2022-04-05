@@ -90,7 +90,8 @@ public class GameManager : MonoBehaviour
 
     public void RunAway()
     {
-        WorldMain.party.Clear();
+        if (WorldMain.party != null)
+            WorldMain.party.Clear();
         UnityEngine.SceneManagement.SceneManager.LoadScene("Lobby");
     }
 
@@ -103,7 +104,8 @@ public class GameManager : MonoBehaviour
     {
         WorldMain.Gold = 0;
         WorldMain.XP = 0;
-        WorldMain.party.Clear();
+        if(WorldMain.party != null)
+            WorldMain.party.Clear();
         UnityEngine.SceneManagement.SceneManager.LoadScene("GameOver",UnityEngine.SceneManagement.LoadSceneMode.Additive);
     }
 }
