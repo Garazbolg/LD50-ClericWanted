@@ -30,7 +30,7 @@ public abstract class Spell : MonoBehaviour
         AudioManager.Instance.PlaySound(audioClip, audioVolume);
     }
 
-    public bool CanCast => enabled && mana.CurrentMana > ManaCost && (Time.time - lastCastTime) > Cooldown;
+    public bool CanCast => enabled && mana.CurrentMana >= ManaCost && (Time.time - lastCastTime) > Cooldown;
 
     public float GetCooldownFill()
     {

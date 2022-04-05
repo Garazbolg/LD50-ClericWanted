@@ -17,4 +17,6 @@ public class CharacterRenderer : MonoBehaviour
     {
         return image.sprite;
     }
+
+    
 }

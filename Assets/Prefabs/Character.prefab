@@ -912,6 +912,7 @@ GameObject:
   - component: {fileID: 540720931710410408}
   - component: {fileID: 6024860513493661634}
   - component: {fileID: 4814021048418713938}
+  - component: {fileID: 5936574284696748885}
   m_Layer: 5
   m_Name: Character
   m_TagString: Untagged
@@ -1035,6 +1036,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   regenSpeed: 2
+  randomize: 1
+  randomScale: 0.3
 --- !u!114 &540720931710410408
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1081,6 +1084,20 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   anim: {fileID: 6024860513493661634}
+--- !u!114 &5936574284696748885
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7114565550324456224}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ae63edb17cab1194a976a1a672343128, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  healthFill: {fileID: 603290149769349638}
+  baseColor: {r: 0.30588236, g: 0.7882353, b: 0.6901961, a: 1}
 --- !u!1 &8483980751754373737
 GameObject:
   m_ObjectHideFlags: 0
