@@ -773,6 +773,7 @@ GameObject:
   - component: {fileID: 288855968}
   - component: {fileID: 288855967}
   - component: {fileID: 288855966}
+  - component: {fileID: 288855970}
   m_Layer: 5
   m_Name: Game
   m_TagString: Untagged
@@ -861,6 +862,25 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!95 &288855970
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288855965}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 8fcbf66dc986af54fb8fffea1af58b62, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1001 &311636105
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2576,9 +2596,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-    quis nostrud exercitation ullamco laboris nisi ut aliqui
+  m_text: 
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: ecabd4cad0169e94f94c8b51b11cd191, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: ecabd4cad0169e94f94c8b51b11cd191, type: 2}
@@ -2905,6 +2923,10 @@ PrefabInstance:
     - target: {fileID: 4744996771258534845, guid: 767dfa877b64f75458ae1b0271e156b9, type: 3}
       propertyPath: m_Name
       value: MenuButton (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744996771258534845, guid: 767dfa877b64f75458ae1b0271e156b9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 767dfa877b64f75458ae1b0271e156b9, type: 3}
@@ -3533,6 +3555,10 @@ PrefabInstance:
     - target: {fileID: 4744996771258534845, guid: 767dfa877b64f75458ae1b0271e156b9, type: 3}
       propertyPath: m_Name
       value: MenuButton (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744996771258534845, guid: 767dfa877b64f75458ae1b0271e156b9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 767dfa877b64f75458ae1b0271e156b9, type: 3}
@@ -5235,6 +5261,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: MenuButton (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 4744996771258534845, guid: 767dfa877b64f75458ae1b0271e156b9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 767dfa877b64f75458ae1b0271e156b9, type: 3}
 --- !u!224 &1950162832 stripped
@@ -5811,6 +5841,10 @@ PrefabInstance:
     - target: {fileID: 4744996771258534845, guid: 767dfa877b64f75458ae1b0271e156b9, type: 3}
       propertyPath: m_Name
       value: MenuButton
+      objectReference: {fileID: 0}
+    - target: {fileID: 4744996771258534845, guid: 767dfa877b64f75458ae1b0271e156b9, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 767dfa877b64f75458ae1b0271e156b9, type: 3}

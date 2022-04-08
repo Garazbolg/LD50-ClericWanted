@@ -1107,6 +1107,7 @@ GameObject:
   - component: {fileID: 288855967}
   - component: {fileID: 288855966}
   - component: {fileID: 288855970}
+  - component: {fileID: 288855971}
   m_Layer: 5
   m_Name: Game
   m_TagString: Untagged
@@ -1210,6 +1211,25 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerInspector: {fileID: 719057809}
   selectedUnit: {fileID: 0}
+--- !u!95 &288855971
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 288855965}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: f90b1cf339354124f97363b9f489ec6b, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!224 &310516588 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 2301019004448754970, guid: 7ade20e414df93e41b155dcb489f2220, type: 3}
@@ -3661,6 +3681,7 @@ GameObject:
   - component: {fileID: 1155496959}
   - component: {fileID: 1155496961}
   - component: {fileID: 1155496960}
+  - component: {fileID: 1155496962}
   m_Layer: 5
   m_Name: Enemy Team
   m_TagString: Untagged
@@ -3685,7 +3706,7 @@ RectTransform:
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 1, y: 1}
   m_AnchoredPosition: {x: -1, y: -17}
-  m_SizeDelta: {x: -6, y: 50}
+  m_SizeDelta: {x: -5.999995, y: 50}
   m_Pivot: {x: 0.5, y: 1}
 --- !u!114 &1155496960
 MonoBehaviour:
@@ -3721,6 +3742,25 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1155496958}
   m_CullTransparentMesh: 1
+--- !u!95 &1155496962
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1155496958}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 13c9d1ec00420a2448608391698e4624, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1212502819
 GameObject:
   m_ObjectHideFlags: 0
@@ -5299,6 +5339,7 @@ GameObject:
   - component: {fileID: 1775662643}
   - component: {fileID: 1775662644}
   - component: {fileID: 1775662645}
+  - component: {fileID: 1775662646}
   m_Layer: 5
   m_Name: Player Team
   m_TagString: Untagged
@@ -5359,6 +5400,25 @@ MonoBehaviour:
   m_ChildScaleWidth: 0
   m_ChildScaleHeight: 0
   m_ReverseArrangement: 0
+--- !u!95 &1775662646
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1775662642}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 586948f93c3eba54e95269dac283a42d, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1791624901
 GameObject:
   m_ObjectHideFlags: 0

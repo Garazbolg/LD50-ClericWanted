@@ -57,8 +57,10 @@ public class GameManager : MonoBehaviour
     {
         yield return new WaitForSeconds(2);
         enemyTeam.Clear();
+        enemyTeam.SetSpawnPointActive(false);
         yield return new WaitForSeconds(delayBetweenWaves-2);
         NextWave();
+        enemyTeam.SetSpawnPointActive(true);
     }
 
     private void NextWave()

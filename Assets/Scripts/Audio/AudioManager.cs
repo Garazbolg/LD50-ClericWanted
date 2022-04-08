@@ -15,6 +15,7 @@ public class AudioManager : MonoBehaviour
 
     public void PlaySound(AudioClip clip, float volume = .5f)
     {
+        
         if(clip && volume >0)
             asource.PlayOneShot(clip, volume);
     }

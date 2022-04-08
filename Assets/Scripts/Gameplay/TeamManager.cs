@@ -51,4 +51,9 @@ public class TeamManager : MonoBehaviour
                 FindObjectOfType<GameManager>().CompleteWave();
         }
     }
+
+    public void SetSpawnPointActive(bool value)
+    {
+        SpawnPoint.gameObject.SetActive(value);
+    }
 }
