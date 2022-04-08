@@ -6,12 +6,11 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public static AudioManager Instance;
-    private AudioSource asource;
+    public AudioSource asource;
 
     private void Awake()
     {
         Instance = this;
-        asource = GetComponent<AudioSource>();
     }
 
     public void PlaySound(AudioClip clip, float volume = .5f)
