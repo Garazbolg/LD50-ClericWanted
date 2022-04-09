@@ -922,9 +922,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTeamProfiles:
   - {fileID: 11400000, guid: cfcca6ac3de4fc844819d1929148b79a, type: 2}
-  - {fileID: 11400000, guid: 409afb905f218ad43ae236ee45193d66, type: 2}
-  - {fileID: 11400000, guid: 43f631eec10e7da41abdee7fdac93477, type: 2}
   - {fileID: 11400000, guid: b6376c663bad9a544adaec1712666a30, type: 2}
+  - {fileID: 11400000, guid: ce50e6b0a4f39314d83ae96cbc00ea65, type: 2}
+  - {fileID: 11400000, guid: ce50e6b0a4f39314d83ae96cbc00ea65, type: 2}
   enemyTeamProfiles:
   - {fileID: 11400000, guid: 409afb905f218ad43ae236ee45193d66, type: 2}
   - {fileID: 11400000, guid: 409afb905f218ad43ae236ee45193d66, type: 2}
@@ -939,6 +939,7 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 67cf605de9f1d424ba0ecdc76ca72560, type: 2}
   - {fileID: 11400000, guid: 102ec7e1455e0954da8b835fbadc7c49, type: 2}
   - {fileID: 11400000, guid: 03c88e838b1093f48887c51ff2192ce2, type: 2}
+  EditorStartingWave: 3
   playerTeam: {fileID: 1120448218}
   enemyTeam: {fileID: 639043040}
   delayBetweenWaves: 3

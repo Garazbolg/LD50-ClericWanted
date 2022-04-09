@@ -530,7 +530,7 @@ MonoBehaviour:
   m_text: Current party
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 32d227fb5551bfb4c935fb7c6fa87970, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 32d227fb5551bfb4c935fb7c6fa87970, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -1340,7 +1340,7 @@ MonoBehaviour:
   m_text: Cleric (You)
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 32d227fb5551bfb4c935fb7c6fa87970, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 32d227fb5551bfb4c935fb7c6fa87970, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -2026,7 +2026,7 @@ MonoBehaviour:
   m_text: Empty slot
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 32d227fb5551bfb4c935fb7c6fa87970, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 32d227fb5551bfb4c935fb7c6fa87970, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -3257,9 +3257,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   numberOfRecruits: 3
   pool:
-  - {fileID: 11400000, guid: 409afb905f218ad43ae236ee45193d66, type: 2}
   - {fileID: 11400000, guid: b6376c663bad9a544adaec1712666a30, type: 2}
   - {fileID: 11400000, guid: 43f631eec10e7da41abdee7fdac93477, type: 2}
+  - {fileID: 11400000, guid: ce50e6b0a4f39314d83ae96cbc00ea65, type: 2}
+  - {fileID: 11400000, guid: 4ab55dde25884464293e0930ff0d0276, type: 2}
   recruitsTranforms: {fileID: 1313990405}
   recruitViewPrefab: {fileID: 6896358674042138657, guid: 10cca51eb1a82aa45b06213800b062e6, type: 3}
   partyDisplay: {fileID: 1626844157}
@@ -3756,7 +3757,7 @@ MonoBehaviour:
   m_text: Empty slot
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 32d227fb5551bfb4c935fb7c6fa87970, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 32d227fb5551bfb4c935fb7c6fa87970, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -4239,7 +4240,7 @@ MonoBehaviour:
   m_text: Empty slot
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 32d227fb5551bfb4c935fb7c6fa87970, type: 2}
-  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 32d227fb5551bfb4c935fb7c6fa87970, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []

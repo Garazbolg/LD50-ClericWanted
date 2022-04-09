@@ -10,6 +10,8 @@ public class TeamManager : MonoBehaviour
 
     [SerializeField] private bool targetIsRandom = false;
 
+    private List<TeamMember> tauntList = new List<TeamMember>();
+
     public TeamManager targetTeam;
     public bool isEnemyTeam = false;
 
@@ -38,6 +40,8 @@ public class TeamManager : MonoBehaviour
     {
         if (members.Count <= 0)
             return null;
+        if (tauntList.Count > 0)
+            return tauntList[0].gameObject;
         int val = targetIsRandom ? Random.Range(0, members.Count) : members.Count-1;
         return members[val].gameObject;
     }
@@ -55,5 +59,15 @@ public class TeamManager : MonoBehaviour
     public void SetSpawnPointActive(bool value)
     {
         SpawnPoint.gameObject.SetActive(value);
+    }
+
+    public void AddToTauntList(GameObject go)
+    {
+        tauntList.Add(go.GetComponent<TeamMember>());
+    }
+
+    public void RemoveFromTauntList(GameObject go)
+    {
+        tauntList.Remove(go.GetComponent<TeamMember>());
     }
 }

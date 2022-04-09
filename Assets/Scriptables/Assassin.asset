@@ -10,10 +10,10 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f165377e33f7697428abf16a7c0a3646, type: 3}
-  m_Name: Tank
+  m_Name: Assassin
   m_EditorClassIdentifier: 
-  classPrefab: {fileID: 8000300677473708482, guid: 61a6499105e17ec41912d5ff8a34b079, type: 3}
-  MaxHealth: 400
-  MaxMana: 10
-  AggroStat: 100
-  sprite: {fileID: 21300000, guid: 54902921c77246944ae39e0d9f9d3214, type: 3}
+  classPrefab: {fileID: 6097083544254332765, guid: 347da4373b2f94d40b2ebee41ffed187, type: 3}
+  MaxHealth: 120
+  MaxMana: 21
+  AggroStat: -10
+  sprite: {fileID: 21300000, guid: 570a4343594a49c489413914cf784e56, type: 3}

@@ -9,6 +9,7 @@ public class GameManager : MonoBehaviour
     public List<CharacterProfile> playerTeamProfiles = new List<CharacterProfile>();
     public List<CharacterProfile> enemyTeamProfiles;
     public WaveDefinition[] waves;
+    public int EditorStartingWave = 0;
 
     private int WaveIndex = -1;
 
@@ -34,6 +35,10 @@ public class GameManager : MonoBehaviour
         {
             playerTeam.Spawn(p);
         }
+
+#if UNITY_EDITOR
+        WaveIndex = EditorStartingWave - 1;
+#endif
 
         NextWave();
     }

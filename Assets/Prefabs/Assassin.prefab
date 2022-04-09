@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1001 &989319364047090402
+--- !u!1001 &3900454287875679357
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -110,11 +110,11 @@ PrefabInstance:
     - target: {fileID: 3787294951937329320, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
       propertyPath: spells.Array.data[0]
       value: 
-      objectReference: {fileID: 6075005088357820397}
+      objectReference: {fileID: 5544450744599311513}
     - target: {fileID: 3787294951937329320, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
       propertyPath: spells.Array.data[1]
       value: 
-      objectReference: {fileID: 6312235565144592768}
+      objectReference: {fileID: -2346333614406407595}
     - target: {fileID: 6326878920794360660, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -125,54 +125,59 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7114565550324456224, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
       propertyPath: m_Name
-      value: Tank
+      value: Assassin
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
---- !u!1 &8000300677473708482 stripped
+--- !u!1 &6097083544254332765 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 7114565550324456224, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
-  m_PrefabInstance: {fileID: 989319364047090402}
+  m_PrefabInstance: {fileID: 3900454287875679357}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &6075005088357820397
+--- !u!114 &-2346333614406407595
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8000300677473708482}
+  m_GameObject: {fileID: 6097083544254332765}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 60059615791fee44cbba3e021369055c, type: 3}
+  m_Script: {fileID: 11500000, guid: 3ba4a74cf0bfcf54b9457afc341a7102, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  ManaCost: 2
-  Cooldown: 4
+  ManaCost: 20
+  Cooldown: 3
   icon: {fileID: 21300000, guid: ad0c44e081f4c184a9b98c13c66fd177, type: 3}
-  spellName: Shied bash
-  spellDescription: Deal 10 damage
-  Tint: {r: 1, g: 1, b: 1, a: 1}
+  spellName: Machiavel's ambush
+  spellDescription: Deal 10 + 8 per 'Mark' stack on the target
+  Tint: {r: 1, g: 0, b: 0, a: 1}
+  audioClip: {fileID: 8300000, guid: 095072c6ed5d0ae4083212e78cd48b49, type: 3}
+  audioVolume: 0.5
+  Damage: 0
+  BaseDamage: 10
+  DamagePerStack: 8
+--- !u!114 &5544450744599311513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6097083544254332765}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1228df3d78348540a51acd3390bb60a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ManaCost: 0.2
+  Cooldown: 1.3
+  icon: {fileID: 21300000, guid: d643078f16196e14f91700ed31d4f1be, type: 3}
+  spellName: Cutthroat
+  spellDescription: 'Deal 2 physical damage
+
+    Add a ''Mark'' stack to the enemy
+    (max:6)'
+  Tint: {r: 0, g: 0.44981623, b: 1, a: 1}
   audioClip: {fileID: 8300000, guid: 8eadbc387d71a2d42a4f3a4d9a973726, type: 3}
   audioVolume: 0.1
-  Damage: 10
---- !u!114 &6312235565144592768
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8000300677473708482}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7363a222b37c7f34b9df8a8827a27ecb, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ManaCost: 10
-  Cooldown: 15
-  icon: {fileID: 21300000, guid: 3ddab53d64934494c901a453397a4dbf, type: 3}
-  spellName: Mass taunt
-  spellDescription: Force enemies to target me for 5 seconds
-  Tint: {r: 1, g: 1, b: 1, a: 1}
-  audioClip: {fileID: 8300000, guid: a32839a7f8f440b40997c09412e9325a, type: 3}
-  audioVolume: 0.2
-  BuffComponent: AggroEnemiesForSecondsBuff
+  Damage: 2

@@ -110,11 +110,11 @@ PrefabInstance:
     - target: {fileID: 3787294951937329320, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
       propertyPath: spells.Array.data[0]
       value: 
-      objectReference: {fileID: 3580419708115625865}
+      objectReference: {fileID: 4843540182229120695}
     - target: {fileID: 3787294951937329320, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
       propertyPath: spells.Array.data[1]
       value: 
-      objectReference: {fileID: -6279434266388494231}
+      objectReference: {fileID: 7375242929799077961}
     - target: {fileID: 6326878920794360660, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
       propertyPath: m_AnchorMax.x
       value: 0
@@ -134,7 +134,7 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 7114565550324456224, guid: 0ed91203b2c805e41a3d7262a09c927c, type: 3}
   m_PrefabInstance: {fileID: 7371450496311941603}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &-6279434266388494231
+--- !u!114 &4843540182229120695
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,30 +143,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 355965274020561603}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e079747231ebf524994baf700437e5ad, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  ManaCost: 15
-  Cooldown: 7
-  icon: {fileID: 21300000, guid: fa51ab3023345a146af8de64b70c454c, type: 3}
-  spellName: Flammenwerfer
-  spellDescription: 'Deal 50 Magic damage
-
-    Like a Lighter, Only Better'
-  Tint: {r: 0.5702691, g: 0.41037738, b: 1, a: 1}
-  audioClip: {fileID: 8300000, guid: 135a991f420e492458cb634ec3b2436e, type: 3}
-  audioVolume: 0.2
-  Damage: 50
---- !u!114 &3580419708115625865
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 355965274020561603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e079747231ebf524994baf700437e5ad, type: 3}
+  m_Script: {fileID: 11500000, guid: aa2a00b3d8e0f3e4cb11f9a8718d1538, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ManaCost: 3
@@ -175,8 +152,32 @@ MonoBehaviour:
   spellName: Fireball
   spellDescription: 'Deal 10 Magic damage
 
-    Burn baby Burn'
+    Burn, baby BURN !'
   Tint: {r: 1, g: 1, b: 1, a: 1}
   audioClip: {fileID: 8300000, guid: 6e95e35cb5da1224eae8ade002781799, type: 3}
   audioVolume: 0.1
   Damage: 10
+--- !u!114 &7375242929799077961
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 355965274020561603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1f9bb4596231f8943990c0d6b4abe72c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ManaCost: 15
+  Cooldown: 7
+  icon: {fileID: 21300000, guid: fa51ab3023345a146af8de64b70c454c, type: 3}
+  spellName: Flammenwerfer
+  spellDescription: 'Deal 12 magic damage to all enemies
+
+    Like a lighter, only
+    better'
+  Tint: {r: 1, g: 0, b: 0.89791393, a: 1}
+  audioClip: {fileID: 8300000, guid: 135a991f420e492458cb634ec3b2436e, type: 3}
+  audioVolume: 0.5
+  Damage: 12
