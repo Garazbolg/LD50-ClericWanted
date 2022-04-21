@@ -193,9 +193,7 @@ MonoBehaviour:
   Cooldown: 5
   icon: {fileID: 21300000, guid: ea373001f842efa449bee9e832577172, type: 3}
   spellName: Cure wounds
-  spellDescription: 'Heal 20
-
-    Feeling better ?'
+  spellDescription: Heal 20
   Tint: {r: 1, g: 1, b: 1, a: 1}
   audioClip: {fileID: 8300000, guid: 9a1ec819be48d704c8723290d7cdcad0, type: 3}
   audioVolume: 0.15
@@ -228,7 +226,7 @@ MonoBehaviour:
   Cooldown: 10
   icon: {fileID: 21300000, guid: ea373001f842efa449bee9e832577172, type: 3}
   spellName: Divine Intervention
-  spellDescription: "Heal 60\nHallelujaaah !\U0001F3B5"
+  spellDescription: Heal 60
   Tint: {r: 0.9858169, g: 0.14899999, b: 1, a: 1}
   audioClip: {fileID: 8300000, guid: 6081c6f0623948b4ca1bc5f53ddb24ec, type: 3}
   audioVolume: 0.2
@@ -273,9 +271,7 @@ MonoBehaviour:
   Cooldown: 0.5
   icon: {fileID: 21300000, guid: 5925cf315355acf4fb863ab616cfaa69, type: 3}
   spellName: Bandage
-  spellDescription: 'Heal 5
-
-    It''s just a damp bandage, but it will stick'
+  spellDescription: Heal 5
   Tint: {r: 1, g: 1, b: 1, a: 1}
   audioClip: {fileID: 8300000, guid: 1ec482bb95dbd85438dcf1a854b2f032, type: 3}
   audioVolume: 0.1
@@ -326,10 +322,7 @@ MonoBehaviour:
   Cooldown: 15
   icon: {fileID: 21300000, guid: 3ddab53d64934494c901a453397a4dbf, type: 3}
   spellName: Gardian Angel
-  spellDescription: 'Makes the target invulnerable for 10 seconds.
-
-    Can''t touch
-    this !'
+  spellDescription: Makes the target invulnerable for 10 seconds.
   Tint: {r: 1, g: 1, b: 1, a: 1}
   audioClip: {fileID: 8300000, guid: a32839a7f8f440b40997c09412e9325a, type: 3}
   audioVolume: 0.2

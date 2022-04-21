@@ -150,9 +150,7 @@ MonoBehaviour:
   Cooldown: 3
   icon: {fileID: 21300000, guid: fa51ab3023345a146af8de64b70c454c, type: 3}
   spellName: Fireball
-  spellDescription: 'Deal 10 Magic damage
-
-    Burn, baby BURN !'
+  spellDescription: Deal 10 Magic damage
   Tint: {r: 1, g: 1, b: 1, a: 1}
   audioClip: {fileID: 8300000, guid: 6e95e35cb5da1224eae8ade002781799, type: 3}
   audioVolume: 0.1
@@ -173,10 +171,7 @@ MonoBehaviour:
   Cooldown: 7
   icon: {fileID: 21300000, guid: fa51ab3023345a146af8de64b70c454c, type: 3}
   spellName: Flammenwerfer
-  spellDescription: 'Deal 12 magic damage to all enemies
-
-    Like a lighter, only
-    better'
+  spellDescription: Deal 12 magic damage to all enemies
   Tint: {r: 1, g: 0, b: 0.89791393, a: 1}
   audioClip: {fileID: 8300000, guid: 135a991f420e492458cb634ec3b2436e, type: 3}
   audioVolume: 0.5

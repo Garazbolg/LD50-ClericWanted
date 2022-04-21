@@ -156,8 +156,6 @@ MonoBehaviour:
   spellName: Bee sting
   spellDescription: 'Deal 3
 
-    Everybody gets a sting
-
 '
   Tint: {r: 1, g: 1, b: 1, a: 0}
   audioClip: {fileID: 8300000, guid: 8eadbc387d71a2d42a4f3a4d9a973726, type: 3}
@@ -179,9 +177,7 @@ MonoBehaviour:
   Cooldown: 6.3
   icon: {fileID: 21300000, guid: d643078f16196e14f91700ed31d4f1be, type: 3}
   spellName: Reckless swing
-  spellDescription: 'Deal 15
-
-    There is a wrong way to dance with a blade'
+  spellDescription: Deal 15
   Tint: {r: 0.68095016, g: 0.291, b: 1, a: 1}
   audioClip: {fileID: 8300000, guid: 095072c6ed5d0ae4083212e78cd48b49, type: 3}
   audioVolume: 0.2
